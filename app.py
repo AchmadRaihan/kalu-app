@@ -22,10 +22,6 @@ def build_model(df):
 	st.write(f'Forecast plot for {n_days} days')
 	fig1 = plot_plotly(m, forecast)
 	st.plotly_chart(fig1)
-    # Plot analisis
-	st.write("Forecast components")
-	fig2 = m.plot_components(forecast)
-	st.write(fig2)
 
 def plot_raw_data(df):
     df['ds'] = pd.to_datetime(df['ds'])
