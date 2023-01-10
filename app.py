@@ -60,7 +60,7 @@ if uploaded_file is not None:
 else:
     st.info('Awaiting for CSV file to be uploaded.')
     if st.button('Press to use Example Dataset'):
-        df = pd.read_csv('c.csv')
+        df = pd.read_csv('kalu.csv')
         plot_raw_data(df)
         build_model(df)
         # Diabetes dataset
