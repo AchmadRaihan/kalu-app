@@ -15,7 +15,11 @@ st.set_page_config(page_title='Water Level App',
 #---------------------------------#
 # Build model
 def build_model(df):
-	m = Prophet().fit(df)
+	m = Prophet(
+        changepoint_prior_scale=0.01,
+        seasonality_prior_scale=0.7,
+        seasonality_mode='multiplicative'
+	).fit(df)
 	future = m.make_future_dataframe(periods=period, freq='h')
 	forecast = m.predict(future)
     # Plot forecast
