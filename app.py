@@ -62,6 +62,7 @@ else:
     if st.button('Press to use Example Dataset'):
 	df = pd.read_csv('kalu.csv')
 	build_model(df)
+	plot_raw_data(df)
         # Diabetes dataset
         #diabetes = load_diabetes()
         #X = pd.DataFrame(diabetes.data, columns=diabetes.feature_names)
