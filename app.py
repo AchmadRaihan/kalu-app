@@ -40,7 +40,7 @@ def plot_raw_data(df):
 with st.sidebar.header('Upload your CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
     st.sidebar.markdown("""
-	[Example CSV input file](https://github.com/AchmadRaihan/kalu-data/blob/main/c.csv)
+	[Example CSV input file](https://github.com/AchmadRaihan/kalu-data/blob/main/kalu.csv)
 	""")
 # Sidebar - Days of prediction
 n_days = st.sidebar.slider('Days of prediction:', 0, 7)
