@@ -43,7 +43,7 @@ with st.sidebar.header('Upload your CSV data'):
 	[Example CSV input file](https://github.com/AchmadRaihan/kalu-data/blob/main/kalu.csv)
 	""")
 # Sidebar - Days of prediction
-n_days = st.sidebar.slider('Days of prediction:', 0, 7)
+n_days = st.sidebar.slider('Days of prediction:', 0, 35)
 period = (n_days * 24) + 15
 
 
