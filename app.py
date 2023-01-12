@@ -44,7 +44,7 @@ with st.sidebar.header('Upload your CSV data'):
 	""")
 # Sidebar - Days of prediction
 n_days = st.sidebar.slider('Days of prediction:', 0, 7)
-period = n_days * 24
+period = (n_days * 24) + 15
 
 
 #---------------------------------#
