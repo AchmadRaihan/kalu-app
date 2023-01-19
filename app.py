@@ -24,7 +24,7 @@ def build_model(df):
 	forecast = m.predict(future)
     # Plot forecast
 	st.write(f'Forecast plot for {n_days} days')
-	fig1 = plot_plotly(m, forecast)
+	fig1 = plot_plotly(m, forecast, xlabel='Waktu', ylabel='Tinggi Air (m)')
 	st.plotly_chart(fig1)
 
 def plot_raw_data(df):
@@ -43,7 +43,7 @@ with st.sidebar.header('Upload your CSV data'):
 	[Example CSV input file](https://github.com/AchmadRaihan/kalu-data/blob/main/kalu.csv)
 	""")
 # Sidebar - Days of prediction
-n_days = st.sidebar.slider('Days of prediction:', 0, 35)
+n_days = st.sidebar.slider('Days of prediction:', 0, 7)
 period = (n_days * 24) + 15
 
 
