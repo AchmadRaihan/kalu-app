@@ -16,8 +16,8 @@ st.set_page_config(page_title='Water Level App',
 # Build model
 def build_model(df):
 	m = Prophet(
-        changepoint_prior_scale=0.1,
-        seasonality_prior_scale=0.9,
+        changepoint_prior_scale=0.5,
+        seasonality_prior_scale=7.0,
         seasonality_mode='multiplicative'
 	).fit(df)
 	future = m.make_future_dataframe(periods=period, freq='h')
