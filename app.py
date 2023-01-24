@@ -60,7 +60,7 @@ if uploaded_file is not None:
     plot_raw_data(df)
     build_model(df)
 else:
-    st.info('Menunggu data .csv untuk melihat hasil prediksi tinggi air sungai.')
+    st.info('Belum *upload* data untuk melihat hasil prediksi tinggi air sungai.')
     if st.button('Gunakan contoh *data set*'):
         df = pd.read_csv('kalu.csv')
         plot_raw_data(df)
