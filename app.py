@@ -53,7 +53,6 @@ st.write("""
 # Sistem Prediksi Tinggi Air Sungai
 *Dashboard* hasil prediksi tinggi air sungai.
 """)
-st.subheader('Dataset')
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
