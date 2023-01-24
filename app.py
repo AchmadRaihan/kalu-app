@@ -37,7 +37,7 @@ def plot_raw_data(df):
 #---------------------------------#
 # Sidebar - Collects user input features into dataframe
 with st.sidebar.header('*Upload .csv file*'):
-    uploaded_file = st.sidebar.file_uploader(type=["csv"])
+    uploaded_file = st.sidebar.file_uploader('*file .csv*', type=["csv"])
     st.sidebar.markdown("""
 	[Contoh .csv *file*](https://github.com/AchmadRaihan/kalu-data/blob/main/kalu.csv)
 	""")
