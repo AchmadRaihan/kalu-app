@@ -43,7 +43,7 @@ with st.sidebar.header('*Upload .csv file*'):
 	""")
 # Sidebar - Days of prediction
 n_days = st.sidebar.slider('Durasi Hari Prediksi:', 0, 7)
-period = (n_days * 24)
+period = n_days * 24
 
 
 #---------------------------------#
