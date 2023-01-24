@@ -30,7 +30,7 @@ def plot_raw_data(df):
     df['ds'] = pd.to_datetime(df['ds'])
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=df['ds'], y=df['y'], name="stock_open"))
-    fig.layout.update(title_text='Geser untuk mengatur penglihatan data', xaxis_rangeslider_visible=True)
+    fig.layout.update(title_text='Grafik *Data Set* Tinggi Air Sungai', xaxis_rangeslider_visible=True)
     st.plotly_chart(fig)
 
 
