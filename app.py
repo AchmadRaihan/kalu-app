@@ -22,7 +22,7 @@ def build_model(df):
 	future = m.make_future_dataframe(periods=period, freq='h')
 	forecast = m.predict(future)
     # Plot forecast
-	st.write(f'Grafik prediksi untuk {n_days} hari')
+	st.write(f'Grafik prediksi tinggi sair sungai untuk {n_days} hari.')
 	fig1 = plot_plotly(m, forecast, xlabel='Waktu', ylabel='Tinggi Air (m)')
 	st.plotly_chart(fig1)
 
@@ -30,7 +30,7 @@ def plot_raw_data(df):
     df['ds'] = pd.to_datetime(df['ds'])
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=df['ds'], y=df['y'], name="stock_open"))
-    fig.layout.update(title_text='Grafik *Data Set* Tinggi Air Sungai', xaxis_rangeslider_visible=True)
+    fig.layout.update(title_text='Grafik Tinggi Air Sungai', xaxis_rangeslider_visible=True)
     st.plotly_chart(fig)
 
 
@@ -61,7 +61,7 @@ if uploaded_file is not None:
     plot_raw_data(df)
     build_model(df)
 else:
-    st.info('*Upload file* .csv untuk melihat hasil prediksi tinggi air sungai.')
+    st.info('Menunggu data .csv untuk melihat hasil prediksi tinggi air sungai.')
     if st.button('Gunakan contoh *data set*'):
         df = pd.read_csv('kalu.csv')
         plot_raw_data(df)
